@@ -2,8 +2,8 @@ import 'react-native-gesture-handler';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from './src/pages/homeScreen';
-import DetailsScreen from './src/pages/detail Screen';
+import HomeScreen from './src/screen/localizacion';
+import DetailsScreen from './src/screen/espisodio';
 import { StatusBar } from 'react-native';
 
 // Importa tus componentes de pantalla
@@ -16,8 +16,8 @@ export default function App() {
     <NavigationContainer>
       <StatusBar />
     <Stack.Navigator>
-      <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="Details" component={DetailsScreen} />
+      <Stack.Screen name="espisodio" component={HomeScreen} />
+      <Stack.Screen name="localizacion" component={DetailsScreen} />
     </Stack.Navigator>
   </NavigationContainer>
   );

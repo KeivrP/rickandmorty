@@ -1,7 +1,7 @@
 import React from 'react';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import Episodios from './screen/espisodiosScreen';
-import Localizaciones from './screen/localizacionScreen';
+import Episodios from './tabs/espisodios';
+import Localizaciones from './tabs/localizaciones';
 
 const HomeScreen = ({ navigation }) => {
 
