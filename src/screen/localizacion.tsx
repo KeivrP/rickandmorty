@@ -1,20 +1,29 @@
 import React from 'react';
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import Episodios from './tabs/espisodios';
-import Localizaciones from './tabs/localizaciones';
+import { View, Text, StyleSheet, Button } from 'react-native';
 
-const HomeScreen = ({ navigation }) => {
-
-const Tab = createMaterialTopTabNavigator();
-
+const Localizacion = ({navigation, route}) => {
+  const {name} = route.params;
   return (
-<Tab.Navigator>
-      <Tab.Screen name="Episodios" component={Episodios} />
-      <Tab.Screen name="Localizaciones" component={Localizaciones} />
-    </Tab.Navigator>
+    <View style={styles.container}>
+      <Text style={styles.title}>{name}</Text>
+      <Button
+        title="Go Back"
+        onPress={() => navigation.goBack() }
+      />
+    </View>
   );
 };
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+});
 
-
-export default HomeScreen;
+export default Localizacion;
